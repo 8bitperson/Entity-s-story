@@ -32,6 +32,7 @@ function draw() {
       if(keyDown("space")){
         a.velocityY = - 6
       }
+      
       a.velocityY =  a.velocityY +0.8; 
 
       if(a.y <  0){
@@ -42,7 +43,10 @@ function draw() {
 
       
    }else if(gamestate == "end"){
-    alert("score:"+score+"      To continue please reload the page")
+    alert("score:"+score+"      To continue please press r and ok")
+    if(keyDown("r")){
+        reload()
+    }
   }
   a.collide(invisibleGround)
   
