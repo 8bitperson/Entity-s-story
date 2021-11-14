@@ -11,3 +11,4 @@ Currently on ver 0.3
 
 To play copy or click on this link:
 
+https://8bitperson.github.io/Entity-s-story/
