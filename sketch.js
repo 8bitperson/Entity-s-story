@@ -4,7 +4,7 @@ var obstacle,obstaclesgroup,objectimg
 var background
 var gamestate = "play"
 var invisibleGround
-alert("Don't touch the ground!")
+alert("Don't touch the ground! To play use space key")
 
 function preload(){
    
@@ -30,10 +30,10 @@ function draw() {
        }
       objective()
       if(keyDown("space")){
-        a.velocityY = - 6
+        a.velocityY = - 8
       }
       
-      a.velocityY =  a.velocityY +0.8; 
+      a.velocityY =  a.velocityY +1; 
 
       if(a.y <  0){
         a.y = a.y - 1
@@ -43,10 +43,8 @@ function draw() {
 
       
    }else if(gamestate == "end"){
-    alert("score:"+score+"      To continue please press r and ok")
-    if(keyDown("r")){
-        reload()
-    }
+    alert("score: "+score+"       To continue please press reload and ok")
+    
   }
   a.collide(invisibleGround)
   
@@ -54,10 +52,10 @@ function draw() {
 function objective(){
     
     if(frameCount % 70 === 0) {
-     var randheight = Math.round(random(600,1000));
+     var randheight = Math.round(random(400,500));
      var randwidth = Math.round(random(90,300));
-     var randY = Math.round(random(windowHeight,100));
-     obstacle = createSprite(windowWidth,windowHeight-60,randwidth,randheight);
+     var randY = Math.round(random(windowHeight,0));
+     obstacle = createSprite(windowWidth,randY,randwidth,randheight);
      obstacle.debug = false;
      obstacle.velocityX = -(6 + 3*score/100);
      
