@@ -8,3 +8,5 @@ Instructions come as alerts.
 
 To play click this link:
 
+https://8bitperson.github.io/Entity-s-story/
+
