@@ -96,7 +96,7 @@ function draw() {
     if (keyDown("r")) {
       window.location.reload();
     }*/
-    window.location.href = "https://youtu.be/dQw4w9WgXcQ";    
+    window.location.replace("https://youtu.be/dQw4w9WgXcQ");    
   }/*else if (levels > 9) {
     obstaclegroup.visible = false
     a.y = windowHeight/2
